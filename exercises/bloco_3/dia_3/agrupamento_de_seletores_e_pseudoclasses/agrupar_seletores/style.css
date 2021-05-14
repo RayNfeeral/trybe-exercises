@@ -1,3 +1,16 @@
 h1, p, li {
   text-align: center;
 }
+
+.caniuse:hover {
+  background-color: #C75000;
+}
+
+.devtools:hover {
+  background-color: #284a2a;
+  color: white;
+}
+
+.youtube:hover {
+  background-color: #f00;
+}
