@@ -2,6 +2,10 @@ h1, p, li {
   text-align: center;
 }
 
+.caniuse, .devtools, .youtube {
+  transition: background-color 1s, color 1s;
+}
+
 .caniuse:hover {
   background-color: #C75000;
 }
