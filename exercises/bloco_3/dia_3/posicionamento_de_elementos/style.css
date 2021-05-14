@@ -28,3 +28,8 @@ img {
   z-index: 1;
 }
 
+.bowser {
+  position: absolute;
+  left: 185px;
+  top: 93px;
+}
