@@ -26,7 +26,7 @@ h1, h3 {
 }
 
 h1 em {
-  border: 1px solid black;
+  border: 1px s class="java"olid black;
   font-size: 40px;
 }
 
@@ -44,4 +44,32 @@ ul:nth-of-type(1) li:nth-of-type(-n+3) {
 
 ul:nth-of-type(1) li.java {
   background-color: pink;
+}
+
+ul:nth-of-type(2) li:hover {
+  font-weight: bold;
+}
+
+ul:nth-of-type(2) li.stackoverflow:hover {
+  color: orange;
+}
+
+ul:nth-of-type(2) li.w3schools:hover {
+  color: green;
+}
+
+ul:nth-of-type(2) li.mdn:hover {
+  color: black;
+}
+
+ul:nth-of-type(2) li.devdocs:hover {
+  color: yellow;
+}
+
+ul:nth-of-type(2) li.trybe:hover {
+  color: greenyellow;
+}
+
+a {
+  color: inherit;
 }
