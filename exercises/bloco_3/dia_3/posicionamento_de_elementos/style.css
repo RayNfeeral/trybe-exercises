@@ -33,3 +33,11 @@ img {
   left: 195px;
   top: 93px;
 }
+
+.floor {
+  border: 1px solid black;
+  position: absolute;
+  top: 208px;
+  width: 295px;
+  z-index: 3;
+}
