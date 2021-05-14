@@ -13,3 +13,18 @@ img {
   top: 145px;
   width: 50px;
 }
+
+.word {
+  left: 94px;
+  top: 73px;
+  position: absolute;
+  width: 80px;
+  z-index: 2
+}
+
+.baloon {
+  left: 85px;
+  position: absolute;
+  z-index: 1;
+}
+
