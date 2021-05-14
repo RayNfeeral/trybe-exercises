@@ -47,3 +47,7 @@ div:nth-of-type(5) h3 {
   color: mediumturquoise;
   font-size: 32px;
 }
+
+div:nth-of-type(2n+1) h3 {
+  font-style: italic;
+}
