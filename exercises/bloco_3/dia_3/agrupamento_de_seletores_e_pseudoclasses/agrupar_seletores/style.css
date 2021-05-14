@@ -27,3 +27,7 @@ a {
 ol li:active {
   font-family: 'Roboto', sans-serif;
 }
+
+ol, ul {
+  list-style: none;
+}
