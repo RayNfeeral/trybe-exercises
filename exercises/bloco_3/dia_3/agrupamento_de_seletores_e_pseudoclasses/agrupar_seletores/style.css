@@ -14,3 +14,7 @@ h1, p, li {
 .youtube:hover {
   background-color: #f00;
 }
+
+ol li:active {
+  font-family: 'Roboto', sans-serif;
+}
