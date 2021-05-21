@@ -8,18 +8,16 @@ n = 5
 const n = 5;
 const numberOfRows = Math.ceil(n/2);
 
-for(let index = numberOfRows; index > 0; index -= 1) {
+for(let currentRow = numberOfRows; currentRow > 0; currentRow -= 1) {
   let row = '';
-  for(let position = 0; position < n; position += 1) {
-    const intervalWithSpaces = index - 1;
-    if(position < intervalWithSpaces) {
+  const numberOfSideSpaces = currentRow - 1;
+  const lastAsterisk = n - numberOfSideSpaces;
+  for(let characterPosition = 0; characterPosition < lastAsterisk; characterPosition += 1) {
+    if (characterPosition < numberOfSideSpaces) {
       row += ' ';
-    }
-    else if (position < (n - intervalWithSpaces)) {
-      row += '*';
     }
     else {
-      row += ' ';
+      row += '*';
     }
   }
   console.log(row);
