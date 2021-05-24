@@ -1,4 +1,9 @@
-// Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
+/* Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
+Exemplo de palíndromo: arara .
+verificaPalindrome('arara') ;
+Retorno esperado: true
+verificaPalindrome('desenvolvimento') ;
+Retorno esperado: false */
 
 function isPalindrome(word) {
   const inverseWord = word.split('').reverse().join('');
@@ -12,3 +17,21 @@ function isPalindrome(word) {
 
 console.log(isPalindrome('arara'));
 console.log(isPalindrome('desenvolvimento'));
+
+/* Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+Array de teste: [2, 3, 6, 7, 10, 1] 
+Valor esperado no retorno da função: 4 */
+
+function indexOfBiggest(numbersArray) {
+  let resultIndex = 0;
+
+  for(let index in numbersArray) {
+    if(numbersArray[resultIndex] < numbersArray[index] ) {
+      resultIndex = index;
+    }
+  }
+
+  return resultIndex;
+}
+
+console.log(indexOfBiggest([2, 3, 6, 7, 10, 1]));
