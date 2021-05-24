@@ -88,7 +88,7 @@ function qualOMovimento(peca) {
       return peca + ': diagonals';
       break;
     case 'king':
-      return peca + ': 1 square an direction');
+      return peca + ': 1 square an direction';
       break;
     case 'knight':
       return peca + ': L shaped';
