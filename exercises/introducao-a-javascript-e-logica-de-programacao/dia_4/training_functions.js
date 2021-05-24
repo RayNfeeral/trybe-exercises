@@ -80,3 +80,29 @@ function seriaTriangulo(a, b, c) {
     return false;
   }
 }
+
+//Exercício 6
+function qualOMovimento(peca) {
+  switch(peca.toLowerCase()) {
+    case 'bishop':
+      return peca + ': diagonals';
+      break;
+    case 'king':
+      return peca + ': 1 square an direction');
+      break;
+    case 'knight':
+      return peca + ': L shaped';
+      break;
+    case 'pawn':
+      return '1 square foward';
+      break;
+    case 'queen':
+      return peca + ': any direction';
+      break;
+    case 'rook':
+      return peca + ': foward, backward, left and right';
+      break;
+    default: 
+    console.log("It isn't a chess piece");
+  }
+}
