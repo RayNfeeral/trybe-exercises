@@ -51,3 +51,16 @@ function maiorDeTres(a, b, c) {
     return a;
   }
 }
+
+//Exercício 4
+function polaridade(a) {
+  if (a > 0) {
+    return 'positive';
+  }
+  else if (a != 0) {
+    return 'negative';
+  }
+  else {
+    return 'zero';
+  }
+}
