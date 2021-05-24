@@ -156,3 +156,15 @@ function anyIsOdd(a, b, c) {
     return false;
   }
 }
+
+//Exercício 10
+function lucroEmMilVendas(custo, venda) {
+  if (custo < 0 || venda < 0) {
+    throw new Error('Valores inválidos!');
+  }
+  else {
+    const custoTotal = 1.2 * custo;
+    const lucro = venda - custoTotal;
+    return lucro;
+  }
+}
