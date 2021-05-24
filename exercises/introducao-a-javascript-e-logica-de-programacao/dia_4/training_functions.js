@@ -1,5 +1,6 @@
 // Transforme em funções os exercício do dia 1 desse bloco
 
+//Exercício 1
 function somar(a, b) {
   return a + b;
 }
@@ -20,4 +21,16 @@ function modulo(a, b) {
   return a % b;
 }
 
-
+//Exercício 2
+function maior(a, b) {
+  if (a > b) {
+    return a;
+  }
+  else if (a != b) {
+    return b;
+  }
+  else {
+    console.log('São iguais');
+    return a;
+  }
+}
