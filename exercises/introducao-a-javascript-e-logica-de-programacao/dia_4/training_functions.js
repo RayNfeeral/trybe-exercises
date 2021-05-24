@@ -132,3 +132,18 @@ function qualOConceito(porcentagem) {
     return 'F';
   }
 }
+
+//Exercício 8
+const a = 3;
+const b = 6;
+const c = 5;
+function anyIsEven(a, b, c) {
+  const condicao = ((a % 2) * (b % 2) * (c % 2)) === 0
+  
+  if (condicao) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
