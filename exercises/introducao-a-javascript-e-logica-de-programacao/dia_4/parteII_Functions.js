@@ -24,9 +24,8 @@ Valor esperado no retorno da função: 4 */
 
 function indexOfBiggest(numbersArray) {
   let resultIndex = 0;
-
   for(let index in numbersArray) {
-    if(numbersArray[resultIndex] < numbersArray[index] ) {
+    if(numbersArray[resultIndex] < numbersArray[index] || !numbersArray[resultIndex]) {
       resultIndex = index;
     }
   }
@@ -44,7 +43,7 @@ function indexOfLowest(numbersArray) {
   let resultIndex = 0;
 
   for(let index in numbersArray) {
-    if(numbersArray[resultIndex] > numbersArray[index] ) {
+    if(numbersArray[resultIndex] > numbersArray[index] || !numbersArray[resultIndex]) {
       resultIndex = index;
     }
   }
@@ -71,3 +70,26 @@ function longestName(namesArray) {
 }
 
 console.log(longestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+/* Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
+Valor esperado no retorno da função: 2 . */
+
+function mostRepeatedInteger(integersArray) {
+  const countArray = [];
+
+  for(let number of integersArray) {
+    if(countArray[number]){
+      countArray[number] += 1
+    }
+    else {
+      countArray[number] = 1;
+    }
+  }
+
+  const mostRepeated = indexOfBiggest(countArray);
+
+  return mostRepeated;
+}
+
+console.log(mostRepeatedInteger([2, 3, 2, 5, 8, 2, 3]))
