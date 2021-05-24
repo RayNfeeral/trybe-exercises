@@ -106,3 +106,29 @@ function qualOMovimento(peca) {
     console.log("It isn't a chess piece");
   }
 }
+
+//Exercício 7
+const porcentagem = 38;
+function qualOConceito(porcentagem) {
+  if (porcentagem < 0 || porcentagem > 100) {
+    throw new Error('Nota inválida!');
+  }
+  else if (porcentagem >= 90) {
+    return 'A';
+  }
+  else if (porcentagem >= 80) {
+    return 'B';
+  }
+  else if (porcentagem >= 70) {
+    return 'C';
+  }
+  else if (porcentagem >= 60) {
+    return 'D';
+  }
+  else if (porcentagem >= 50) {
+    return 'E';
+  }
+  else {
+    return 'F';
+  }
+}
