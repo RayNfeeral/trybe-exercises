@@ -54,3 +54,20 @@ function indexOfLowest(numbersArray) {
 
 console.log(indexOfLowest([2, 4, 6, 7, 10, 0, -3]));
 
+/* Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
+Valor esperado no retorno da função: Fernanda . */
+
+function longestName(namesArray) {
+  let resultName = '';
+
+  for(let name of namesArray) {
+    if(resultName.length < name.length ) {
+      resultName = name;
+    }
+  }
+
+  return resultName;
+}
+
+console.log(longestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
