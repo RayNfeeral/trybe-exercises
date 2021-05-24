@@ -34,3 +34,20 @@ function maior(a, b) {
     return a;
   }
 }
+
+//Exercício 3
+function maiorDeTres(a, b, c) {
+  if (a > b & a > c) {
+    return a;
+  }
+  else if (b > a & b > c) {
+    return b;
+  }
+  else if (c > a & c > b) {
+    return c;
+  }
+  else {
+    console.log('São iguais');
+    return a;
+  }
+}
