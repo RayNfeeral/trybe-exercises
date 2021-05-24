@@ -64,3 +64,19 @@ function polaridade(a) {
     return 'zero';
   }
 }
+
+
+//Exercício 5
+function seriaTriangulo(a, b, c) {
+  const soma = a + b + c;
+  
+  if (a < 0 || b < 0 || c < 0) {
+    throw new Error('Erro! Ângulos inválidos!');
+  }
+  else if (soma == 180) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
