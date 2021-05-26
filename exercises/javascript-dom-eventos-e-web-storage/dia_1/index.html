@@ -58,7 +58,7 @@
         }
 
         changeMainText();
-
+        
         function changeMainContentBackground() {
           const mainContent = document.getElementsByClassName('main-content')[0];
           mainContent.style.backgroundColor = 'rgb(76,164,109)';
@@ -72,6 +72,13 @@
         }
 
         changeCenterContentBackground();
+
+        function fixTitle() {
+          const title = document.getElementsByClassName('title')[0];
+          title.innerHTML = 'Exercício 5.1 - Javascript '
+        }
+
+        fixTitle();
     </script>
   </body>
 </html>
