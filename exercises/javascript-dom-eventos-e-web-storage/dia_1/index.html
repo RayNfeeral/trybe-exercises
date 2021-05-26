@@ -86,6 +86,13 @@
         }
 
         captalizeMainText();
+
+        function showPOnConsole() {
+          const paragraphs = document.getElementsByTagName('p');
+          Array.from(paragraphs).forEach(p => console.log(p.innerHTML));
+        }
+
+        showPOnConsole();
     </script>
   </body>
 </html>
