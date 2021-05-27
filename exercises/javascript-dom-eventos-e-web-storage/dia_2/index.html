@@ -101,6 +101,13 @@
         uList.appendChild(item);
       }
       rightContentContainer.appendChild(uList);
+
+      // 9. Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2
+      for (let index = 0; index < 3; index += 1) {
+        let subtitle = document.createElement('h3');
+        subtitle.innerHTML = 'Subtítulo';
+        mainContentContainer.appendChild(subtitle);
+      }
     </script>
   </body>
 </html>
