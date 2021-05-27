@@ -76,6 +76,11 @@
       const paragraph = document.createElement('p');
       paragraph.innerHTML = 'Hello World!';
       centerContentContainer.appendChild(paragraph);
+
+      // 5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2
+      const leftContentContainer = document.createElement('div');
+      leftContentContainer.className = 'left-content';
+      mainContentContainer.appendChild(leftContentContainer);
     </script>
   </body>
 </html>
