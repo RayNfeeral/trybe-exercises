@@ -71,6 +71,11 @@
       const centerContentContainer = document.createElement('div');
       centerContentContainer.className = 'center-content';
       mainContentContainer.appendChild(centerContentContainer);
+
+      // 4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto
+      const paragraph = document.createElement('p');
+      paragraph.innerHTML = 'Hello World!';
+      centerContentContainer.appendChild(paragraph);
     </script>
   </body>
 </html>
