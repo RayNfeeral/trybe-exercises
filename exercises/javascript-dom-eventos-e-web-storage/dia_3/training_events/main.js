@@ -57,3 +57,10 @@ function changeText(event) {
 
 input.addEventListener('keyup', changeText);
 input.addEventListener('focusout', e => e.target.value = '');
+
+// Abrindo nova página ao clicar duas vezes no meu top 3
+function redirect(event) {
+  window.open('https://raynfeeral.github.io/');
+}
+
+myWebpage.addEventListener('dblclick', redirect);
