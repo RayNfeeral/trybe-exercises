@@ -36,12 +36,24 @@ function toggleTechClass(event) {
   const hasTech = document.getElementsByClassName('tech');
 
   if (hasTech.length) {
-    hasTech[0].className = hasTech[0].className.split(' ').filter(classItem => classItem !== 'tech').join(' ');
-  }
+      hasTech[0].className = hasTech[0].className.split(' ').filter(classItem => classItem !== 'tech').join(' ');
+    }
 
   event.target.className += ' tech';
 }
 
-divUm.addEventListener('click', toggleTechClass);
-divDois.addEventListener('click', toggleTechClass);
-divTres.addEventListener('click', toggleTechClass);
+  divUm.addEventListener('click', toggleTechClass);
+  divDois.addEventListener('click', toggleTechClass);
+  divTres.addEventListener('click', toggleTechClass);
+
+// Modificando o texto do elemento com classe tech ao modificar o texto do input
+function changeText(event) {
+  const selectedElement = document.getElementsByClassName('tech')[0];
+
+  if (selectedElement) {
+    selectedElement.innerHTML = event.target.value;
+  }
+}
+
+input.addEventListener('keyup', changeText);
+input.addEventListener('focusout', e => e.target.value = '');
