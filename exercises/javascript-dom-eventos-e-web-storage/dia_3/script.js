@@ -46,7 +46,7 @@ function createDaysOfTheMonth(monthDays, fridays, holidays) {
 
 createDaysOfTheMonth(dezDaysList, dezFridays, dezHolidays);
 
-/* Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+/* 2. Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
 Adicione a este botão a ID "btn-holiday" .
 Adicione este botão como filho/filha da tag <div> com classe "buttons-container" */
 
@@ -61,3 +61,26 @@ function createHolidayBtn(btnName) {
 }
 
 createHolidayBtn('Feriados');
+
+/* 3. Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" */
+
+function addHolidaysBehavior() {
+  const holidayBtn = document.getElementById('btn-holiday');
+
+  holidayBtn.addEventListener('click', function() {
+    const holidayDaysList = document.getElementsByClassName('holiday');
+    
+    for (let index = 0; index < holidayDaysList.length; index += 1) {
+      if (holidayDaysList[index].style.backgroundColor) {
+        holidayDaysList[index].style.backgroundColor = '';
+        holidayDaysList[index].style.color = '';
+      } else {
+        holidayDaysList[index].style.backgroundColor = 'green';
+        holidayDaysList[index].style.color = 'white';
+      }
+    }
+  })
+}
+
+addHolidaysBehavior();
