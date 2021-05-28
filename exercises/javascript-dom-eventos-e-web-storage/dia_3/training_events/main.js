@@ -64,3 +64,10 @@ function redirect(event) {
 }
 
 myWebpage.addEventListener('dblclick', redirect);
+
+// Mudando a cor do meu top 3 ao passar o mouse sobre
+function changeColor(event) {
+  event.target.style.color = '#2fc18c'
+}
+
+myWebpage.addEventListener('mouseover', changeColor);
