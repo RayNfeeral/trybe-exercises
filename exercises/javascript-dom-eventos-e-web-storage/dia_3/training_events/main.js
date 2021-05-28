@@ -30,3 +30,18 @@ divUm.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro do addEventListener. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'divUm'.
+
+// Adicionando a classe tech ao elemento selecionado
+function toggleTechClass(event) {
+  const hasTech = document.getElementsByClassName('tech');
+
+  if (hasTech.length) {
+    hasTech[0].className = hasTech[0].className.split(' ').filter(classItem => classItem !== 'tech').join(' ');
+  }
+
+  event.target.className += ' tech';
+}
+
+divUm.addEventListener('click', toggleTechClass);
+divDois.addEventListener('click', toggleTechClass);
+divTres.addEventListener('click', toggleTechClass);
