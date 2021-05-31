@@ -172,3 +172,22 @@ function createTaskTag(tagColor) {
 }
 
 createTaskTag('green');
+
+/* 9. Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada. */
+function taskTagBehavior(event) {
+  const tag = event.target;
+  
+  if(tag.classList.contains('selected')) {
+    tag.classList.remove('selected');
+  } else {
+    document.querySelectorAll('.task').forEach(tag => tag.classList.contains('selected') && tag.classList.remove('selected'));
+    tag.classList.add('selected');
+  }
+}
+
+const allTaskTags = document.getElementsByClassName('task');
+
+for (let index = 0; index < allTaskTags.length; index += 1) {
+  allTaskTags[index].addEventListener('click', taskTagBehavior);
+}
