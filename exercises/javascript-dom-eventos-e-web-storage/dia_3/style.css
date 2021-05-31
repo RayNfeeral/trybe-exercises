@@ -33,6 +33,7 @@ button {
   font-size:20px;
   margin: 5px 0;
   text-align: center;
+  user-select: none;
   vertical-align: middle;
   width: 13.6%;
 }
@@ -84,6 +85,7 @@ label {
   display: inline-block;
   height: 35px;
   margin-left: 10px;
+  user-select: none;
   vertical-align: middle;
   width: 35px;
 }
