@@ -225,3 +225,35 @@ function addDayBehavior() {
 }
 
 addDayBehavior();
+
+/* Bonus. Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+Dica - Propriedade: keyCode */
+function compromisesBehavior(event) {
+  const compromise = document.getElementById('task-input').value;
+  const compromiseList = document.querySelector('.task-list');
+
+  if (!compromise) {
+    window.alert('O compromisso não foi informado!');
+    return;
+  }
+
+  const compromiseItem = document.createElement('p');
+  compromiseItem.innerHTML = compromise;
+  compromiseList.appendChild(compromiseItem);
+}
+
+function inputBehavior(event) {
+  const keycode = event.keycode || event.which;
+
+  if (keycode === 13) {
+    document.getElementById('btn-add').click();
+  }
+}
+
+const addCompromiseBtn = document.getElementById('btn-add');
+const compromiseInput = document.getElementById('task-input');
+
+addCompromiseBtn.addEventListener('click', compromisesBehavior);
+compromiseInput.addEventListener('keypress', inputBehavior);
