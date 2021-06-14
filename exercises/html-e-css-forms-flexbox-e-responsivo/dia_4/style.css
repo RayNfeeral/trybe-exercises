@@ -61,12 +61,13 @@ body {
 
 .card-container {
   display: flex;
-  flex-basis: 16%;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .card-container div {
+  flex-basis: 16%;
+  flex-grow: 1;
   align-items: center;
   background-color: #5C687C;
   border: black solid 1px;
