@@ -80,3 +80,46 @@
   padding: 20px;
   height: 1%;
 }
+
+@media print {
+  #header, #navigation, #footer {
+    display: none;
+  }
+
+  #aside {
+    display: block;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  * {
+    clear: none !important;
+    float: none !important;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  #header {
+    position: sticky;
+    top: 0;
+  }
+  
+  #aside {
+    display: none;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #navigation {
+    margin-top: 8px;
+  }
+}
