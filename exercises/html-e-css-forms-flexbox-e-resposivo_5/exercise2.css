@@ -28,6 +28,22 @@ html {
   flex-basis: 100%;
 }
 
+.menu p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.menu nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.menu nav li:nth-of-type(n+2) {
+  margin-left: 8px;
+}
+
 .aside-one ul, .aside-two ul {
   list-style: none;
   padding: 0;
@@ -50,14 +66,13 @@ html {
   .menu nav {
     display: none;
   }
-  
-  .menu p {
-    font-size: 1.5em;
-    text-align: center;
-  }
 
   .aside-one ul li, .aside-two ul li {
     margin-bottom: 4px;
+  }
+
+  .aside-one {
+    max-width: 80%;
   }
 
   .aside-two {
@@ -73,5 +88,37 @@ html {
   .copyright {
     flex-basis: 80%;
     order: 2;
+  }
+}
+
+@media screen and (min-width: 498px) and (max-width: 1024px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .aside-one {
+    max-width: 40%;
+  }
+
+  .aside-two {
+    max-width: 40%;
+  }
+
+  .main-content {
+    flex-basis: 80%;
+  }
+
+  .copyright {
+    flex-basis: 80%;
+  }
+
+  .copyright hr {
+    display: none;
   }
 }
