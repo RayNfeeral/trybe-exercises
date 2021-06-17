@@ -122,3 +122,41 @@ html {
     display: none;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+
+  .container hr {
+    flex-basis: 90%;
+  }
+
+  .aside-one {
+    max-width: 40%;
+  }
+
+  .aside-two {
+    max-width: 40%;
+  }
+
+  .main-content {
+    flex-basis: 90%;
+  }
+
+  .copyright {
+    flex-basis: 90%;
+  }
+
+  .copyright hr {
+    display: none;
+  }
+}
