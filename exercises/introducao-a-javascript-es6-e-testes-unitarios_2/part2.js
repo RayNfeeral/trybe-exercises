@@ -73,14 +73,35 @@ function includesProperty(object, key, value) {
 }
 
 // Bonus 1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
-function mathStudents(object) {
+function subjectStudents(object, subject) {
   let total = 0;
 
   for (let lesson of Object.values(object)) {
-    if (lesson.materia === 'Matemática') {
+    if (lesson.materia === subject) {
       total += lesson.numeroEstudantes;
     }
   }
 
   return total;
 }
+
+// 2. Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+function createReport(object, teacher) {
+  const aulas = [];
+  let estudantes = 0;
+
+  for (let lesson of Object.values(object)) {
+    if (lesson.professor === teacher) {
+      aulas.push(lesson.materia);
+      estudantes += lesson.numeroEstudantes;
+    }
+  }
+
+  return {
+    professor: teacher,
+    aulas,
+    estudantes,
+  };
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
