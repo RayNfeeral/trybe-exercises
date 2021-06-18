@@ -71,3 +71,5 @@ function includesProperty(object, key, value) {
 
   return false;
 }
+
+// Bonus 1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
