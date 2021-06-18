@@ -29,3 +29,8 @@ addProperty(lesson2, 'turno', 'manhã');
 function listKeys(object) {
   console.log(Object.keys(object).join(',\n'));
 }
+
+// 3. Crie uma função para mostrar o tamanho de um objeto.
+function showSize(object) {
+  console.log(Object.keys(object).length);
+}
