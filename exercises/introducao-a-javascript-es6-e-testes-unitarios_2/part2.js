@@ -24,3 +24,8 @@ function addProperty(object, key, value) {
 }
 
 addProperty(lesson2, 'turno', 'manhã');
+
+// 2. Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
+function listKeys(object) {
+  console.log(Object.keys(object).join(',\n'));
+}
