@@ -17,3 +17,10 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+// 1. Crie uma função para adicionar o turno da manhã na lesson2 . Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
+function addProperty(object, key, value) {
+  object[key] = value;
+}
+
+addProperty(lesson2, 'turno', 'manhã');
