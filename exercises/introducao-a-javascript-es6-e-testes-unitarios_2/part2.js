@@ -58,4 +58,7 @@ function studentsTotal(object) {
   return total;
 }
 
-console.log(studentsTotal(allLessons));
+// 7. Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
+function getValueByIndex(object, index) {
+  return Object.values(object)[index];
+}
