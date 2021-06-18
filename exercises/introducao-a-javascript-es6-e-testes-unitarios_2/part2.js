@@ -73,3 +73,14 @@ function includesProperty(object, key, value) {
 }
 
 // Bonus 1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+function mathStudents(object) {
+  let total = 0;
+
+  for (let lesson of Object.values(object)) {
+    if (lesson.materia === 'Matemática') {
+      total += lesson.numeroEstudantes;
+    }
+  }
+
+  return total;
+}
