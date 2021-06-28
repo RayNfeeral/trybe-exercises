@@ -9,6 +9,9 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
+  return names.reduce((acc, crr) => {
+    return acc + crr.match(/a|A/g).length;
+  }, 0);
 }
 
 assert.deepStrictEqual(containsA(), 20);
