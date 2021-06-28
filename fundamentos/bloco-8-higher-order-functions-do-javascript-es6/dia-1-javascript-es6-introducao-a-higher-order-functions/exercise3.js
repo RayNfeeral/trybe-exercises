@@ -2,3 +2,23 @@
 Quando a resposta for correta a contagem sobe 1 ponto, quando for incorreta desce 0.5 pontos, e quando não houver resposta ("N.A") não altera-se a contagem. */
 const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const sumAnswers = (rightAnswers, studentAnswers, checkAnswer) => {
+  let sum = 0;
+
+  for (let index = 0; index < rightAnswers.length; index += 1) {
+    sum += checkAnswer(rightAnswers[index], studentAnswers[index]);
+  }
+
+  return sum;
+}
+
+const checkAnswer = (answer, answered) => {
+  if (answered === 'N.A') {
+    return 0;
+  }
+
+  return answer === answered ? 1 : -0.5;
+}
+
+console.log(sumAnswers(rightAnswers, studentAnswers, checkAnswer));
