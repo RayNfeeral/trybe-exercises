@@ -4,7 +4,7 @@
 const mage = {
   healthPoints: 130,
   intelligence: 45,
-  mana: 125,
+  mana: 60,
   damage: undefined,
 };
 
@@ -16,7 +16,7 @@ const warrior = {
 };
 
 const dragon = {
-  healthPoints: 350,
+  healthPoints: 700,
   strength: 50,
   damage: undefined,
 };
@@ -59,7 +59,7 @@ const gameActions = {
     mage.damage = damage;
     mage.mana -= manaSpent;
 
-    if (mage.damage) {
+    if (typeof mage.damage === 'string') {
       dragon.healthPoints -= mage.damage;
     }
   },
@@ -77,3 +77,26 @@ const gameActions = {
     return battleMembers;
   }
 };
+
+gameActions.showTurn();
+
+for (let round = 1; round <= 100; round += 1) {
+  const { mage, warrior, dragon } = battleMembers;
+  
+  mage.healthPoints > 0 && (gameActions.mageTurn(mageDamage), gameActions.showTurn())
+  if (dragon.healthPoints <= 0) {
+    console.log(`Você venceu na ${round}ª rodada! 😄`);
+    break;
+  }
+  warrior.healthPoints > 0 && (gameActions.warriorTurn(warriorDamage), gameActions.showTurn())
+  if (dragon.healthPoints <= 0) {
+    console.log(`Você venceu na ${round}ª rodada! 😄`);
+    break;
+  }
+  gameActions.dragonTurn(dragonsDamage);
+  gameActions.showTurn();
+  if (warrior.healthPoints <= 0 && mage.healthPoints <= 0) {
+    console.log(`Você perdeu na ${round}ª rodada! 😭`);
+    break;
+  }
+}
