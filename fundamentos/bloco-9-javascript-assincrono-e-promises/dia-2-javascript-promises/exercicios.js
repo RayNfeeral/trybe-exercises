@@ -12,10 +12,10 @@ new Promise((resolve, reject) => {
   }
   const total = array.reduce((acc, number) => acc + number, 0);
   if (total < 8000) {
-    resolve();
+    resolve(total);
   } else {
     reject();
   }
 })
-.then(() => console.log('Promise resolvida'))
+.then(response => [response/2, response/3, response/5, response/10])
 .catch(() => console.log('Promise rejeitada'));
