@@ -9,6 +9,10 @@
 // 4. Quando a Promise for rejeitada, imprima, via console.log , a frase "É mais de oito mil! Essa promise deve estar quebrada!"
 
 // 5. Quando a Promise for bem-sucedida, encadeie nela uma segunda Promise que some os elementos do array.
+
+// Bonus
+// Utilize somente Higher Order Functions para fazer as operações com o array;
+// Refatore a Promise para utilizar somente async e await.
 new Promise((resolve, reject) => {
   const array = [];
   for (let n = 0; n < 10; n += 1) {
