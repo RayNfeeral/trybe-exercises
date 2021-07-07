@@ -22,4 +22,5 @@ new Promise((resolve, reject) => {
   }
 })
 .then(response => [response/2, response/3, response/5, response/10])
+.then(array => console.log(array.reduce((acc, number) => acc + number, 0)))
 .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
