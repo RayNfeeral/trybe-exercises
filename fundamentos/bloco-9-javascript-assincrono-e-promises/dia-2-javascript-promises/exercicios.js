@@ -13,18 +13,45 @@
 // Bonus
 // Utilize somente Higher Order Functions para fazer as operações com o array;
 // Refatore a Promise para utilizar somente async e await.
-new Promise((resolve, reject) => {
-  const array = [];
-  for (let n = 0; n < 10; n += 1) {
-    array.push(Math.pow(Math.round(Math.random() * 50 + 1), 2));
+const getPower = () => {
+  return new Promise((resolve, reject) => {
+    const array = [];
+    for (let n = 0; n < 10; n += 1) {
+      array.push(Math.pow(Math.round(Math.random() * 50 + 1), 2));
+    }
+    const total = array.reduce((acc, number) => acc + number, 0);
+    if (total < 8000) {
+      resolve(total);
+    } else {
+      reject();
+    }
+  });
+}
+
+const isMoreThan8000 = async () => {
+  try {
+    const response = await getPower();
+    const newArray = [response/2, response/3, response/5, response/10];
+    console.log(newArray.reduce((acc, number) => acc + number, 0));
+  } catch {
+    console.log('É mais de oito mil! Essa promise deve estar quebrada!');
   }
-  const total = array.reduce((acc, number) => acc + number, 0);
-  if (total < 8000) {
-    resolve(total);
-  } else {
-    reject();
-  }
-})
-.then(response => [response/2, response/3, response/5, response/10])
-.then(array => console.log(array.reduce((acc, number) => acc + number, 0)))
-.catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
+}
+
+isMoreThan8000();
+
+// new Promise((resolve, reject) => {
+//   const array = [];
+//   for (let n = 0; n < 10; n += 1) {
+//     array.push(Math.pow(Math.round(Math.random() * 50 + 1), 2));
+//   }
+//   const total = array.reduce((acc, number) => acc + number, 0);
+//   if (total < 8000) {
+//     resolve(total);
+//   } else {
+//     reject();
+//   }
+// })
+// .then(response => [response/2, response/3, response/5, response/10])
+// .then(array => console.log(array.reduce((acc, number) => acc + number, 0)))
+// .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
