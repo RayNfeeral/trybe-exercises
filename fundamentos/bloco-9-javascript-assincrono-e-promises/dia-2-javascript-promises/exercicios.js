@@ -20,4 +20,4 @@ new Promise((resolve, reject) => {
   }
 })
 .then(response => [response/2, response/3, response/5, response/10])
-.catch(() => console.log('Promise rejeitada'));
+.catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
