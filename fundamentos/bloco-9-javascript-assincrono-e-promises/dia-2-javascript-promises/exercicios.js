@@ -7,6 +7,8 @@
 // 3. Quando a promise for resolvida com sucesso, retorne um array com 4 itens, sendo eles o resultado da divisão do numero resultante por 2, 3, 5 e 10.
 
 // 4. Quando a Promise for rejeitada, imprima, via console.log , a frase "É mais de oito mil! Essa promise deve estar quebrada!"
+
+// 5. Quando a Promise for bem-sucedida, encadeie nela uma segunda Promise que some os elementos do array.
 new Promise((resolve, reject) => {
   const array = [];
   for (let n = 0; n < 10; n += 1) {
