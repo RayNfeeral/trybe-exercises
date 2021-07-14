@@ -1,7 +1,7 @@
 const { encode, decode } = require('./encode&decode');
 
 describe ('testando encode', () => {
-  it ('deveria estar definida', () => {
+  it ('deveria ser uma função', () => {
     expect(typeof encode).toBe('function');
   });
 
@@ -19,7 +19,7 @@ describe ('testando encode', () => {
 });
 
 describe ('testando decode', () => {
-  it ('deveria estar definida', () => {
+  it ('deveria ser uma função', () => {
     expect(typeof decode).toBe('function');
   });
   
