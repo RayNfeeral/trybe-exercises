@@ -84,3 +84,7 @@ db.superheroes.find({
 // Exercício 16: Retorne o total de documentos que não contêm o campo race.
 use("class");
 db.superheroes.find({ race: { $exists: false } }).count();
+
+// Exercício 17: Retorne o total de documentos que contêm o campo hairColor.
+use("class");
+db.superheroes.find({ "aspects.hairColor": { $exists: true } }).count();
